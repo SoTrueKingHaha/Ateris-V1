@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{903ea667-3d80-43e2-bcc1-153099e22948}</ProjectGuid>
+    <RootNamespace>LiteBaseTF2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\DirectX SDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\DirectX SDK\Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>dev</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Core.cpp" />
+    <ClCompile Include="src\Core\Features\Assistance\Aimbot\Aimbot.cpp" />
+    <ClCompile Include="src\Core\Features\Assistance\Aimbot\AimbotGlobal\AimbotGlobal.cpp" />
+    <ClCompile Include="src\Core\Features\Assistance\Aimbot\AimbotHitscan\AimbotHitscan.cpp" />
+    <ClCompile Include="src\Core\Features\Assistance\Aimbot\AimbotProjectile\AimbotProjectile.cpp" />
+    <ClCompile Include="src\Core\Features\Assistance\Aimbot\MoveSim\MoveSim.cpp" />
+    <ClCompile Include="src\Core\Features\Assistance\Triggerbot\Triggerbot.cpp" />
+    <ClCompile Include="src\Core\Features\Events\BadActors\BadActors.cpp" />
+    <ClCompile Include="src\Core\Features\Events\Events.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\AntiAim\AntiAim.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\AntiAim\AntiAimBeta.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\AntiAim\FakeAng.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\Backtrack\Backtrack.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\CritHack\CritHack.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\Engine Prediction\Prediction.cpp" />
+    <ClCompile Include="src\Core\Features\Exploits\Fakelag\Fakelag.cpp" />
+    <ClCompile Include="src\Core\Features\Misc\HookedNetVars\NetVarsHk.cpp" />
+    <ClCompile Include="src\Core\Features\Misc\Misc.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\AttributeChanger\AttributeChanger.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Models\Models.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Outlines\Outlines.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\ESP\ESP.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Indicators\Arrows.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Indicators\Indicators.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Menu\ConfigManager\ConfigManager.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Menu\DoUser.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Menu\GUI.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Menu\InputHelper\InputHelper.cpp" />
+    <ClCompile Include="src\Core\Features\Visuals\Render\GUI\Menu\PlayerList\PlayerList.cpp" />
+    <ClCompile Include="src\Core\Hooks\AvoidPlayers\AvoidPlayers.cpp" />
+    <ClCompile Include="src\Core\Hooks\CalcIsAttackCritical\CalcIsAttackCritical.cpp" />
+    <ClCompile Include="src\Core\Hooks\CanMoveDuringTaunt\CanMoveDuringTaunt.cpp" />
+    <ClCompile Include="src\Core\Hooks\CanRequestToJoinPlayer\CanRequestToJoinPlayer.cpp" />
+    <ClCompile Include="src\Core\Hooks\ChatPrintf\ChatPrintf.cpp" />
+    <ClCompile Include="src\Core\Hooks\CheckForSequenceChange\CheckForSequenceChange.cpp" />
+    <ClCompile Include="src\Core\Hooks\CheckSimpleMaterial\CheckSimpleMaterial.cpp" />
+    <ClCompile Include="src\Core\Hooks\CL_FireEvents\CL_FireEvents.cpp" />
+    <ClCompile Include="src\Core\Hooks\CL_LoadWhitelist\CL_LoadWhitelist.cpp" />
+    <ClCompile Include="src\Core\Hooks\CL_Move\CL_Move.cpp" />
+    <ClCompile Include="src\Core\Hooks\CL_SendMove\CL_SendMove.cpp" />
+    <ClCompile Include="src\Core\Hooks\CreateMove\CreateMove.cpp" />
+    <ClCompile Include="src\Core\Hooks\CreateTFRagdoll\CreateTFRagdoll.cpp" />
+    <ClCompile Include="src\Core\Hooks\CritBucketAdd\CritBucketAdd.cpp" />
+    <ClCompile Include="src\Core\Hooks\CritBucketWithdraw\CritBucketWithdraw.cpp" />
+    <ClCompile Include="src\Core\Hooks\CTFGameMovement\CTFGameMovement.cpp" />
+    <ClCompile Include="src\Core\Hooks\DataTableWarning\DataTableWarning.cpp" />
+    <ClCompile Include="src\Core\Hooks\DeleteIfUnreferenced\DeleteIfUnreferenced.cpp" />
+    <ClCompile Include="src\Core\Hooks\DoPostScreenSpaceEffects\DoPostScreenSpaceEffects.cpp" />
+    <ClCompile Include="src\Core\Hooks\DrawModelExecute\DrawModelExecute.cpp" />
+    <ClCompile Include="src\Core\Hooks\DrawStaticProps\DrawStaticProps.cpp" />
+    <ClCompile Include="src\Core\Hooks\DrawViewModels\DrawViewModels.cpp" />
+    <ClCompile Include="src\Core\Hooks\FireBullets\FireBullets.cpp" />
+    <ClCompile Include="src\Core\Hooks\ForcedMaterialOverride\ForcedMaterialOverride.cpp" />
+    <ClCompile Include="src\Core\Hooks\FrameAdvance\FrameAdvance.cpp" />
+    <ClCompile Include="src\Core\Hooks\FrameStageNotify\FrameStageNotify.cpp" />
+    <ClCompile Include="src\Core\Hooks\GetClientInterpAmount\GetClientInterpAmount.cpp" />
+    <ClCompile Include="src\Core\Hooks\GetDirectPingToPOP\GetDirectPingToPOP.cpp" />
+    <ClCompile Include="src\Core\Hooks\GetMaxItemCount\GetMaxItemCount.cpp" />
+    <ClCompile Include="src\Core\Hooks\GetOuterAbsVelocity\GetOuterAbsVelocity.cpp" />
+    <ClCompile Include="src\Core\Hooks\GetUserCmd\GetUserCmd.cpp" />
+    <ClCompile Include="src\Core\Hooks\InCond\InCond.cpp" />
+    <ClCompile Include="src\Core\Hooks\IsPlayerOnSteamFriendsList\IsPlayerOnSteamFriendsList.cpp" />
+    <ClCompile Include="src\Core\Hooks\IsPlayingTimeDemo\IsPlayingTimeDemo.cpp" />
+    <ClCompile Include="src\Core\Hooks\IsTaunting\IsTaunting.cpp" />
+    <ClCompile Include="src\Core\Hooks\KeyEvent\KeyEvent.cpp" />
+    <ClCompile Include="src\Core\Hooks\LevelInitPostEntity\LevelInitPostEntity.cpp" />
+    <ClCompile Include="src\Core\Hooks\LevelInitPreEntity\LevelInitPreEntity.cpp" />
+    <ClCompile Include="src\Core\Hooks\LevelInit\LevelInit.cpp" />
+    <ClCompile Include="src\Core\Hooks\LevelShutdown\LevelShutdown.cpp" />
+    <ClCompile Include="src\Core\Hooks\LockCursor\LockCursor.cpp" />
+    <ClCompile Include="src\Core\Hooks\MatchNotification\MatchNotification.cpp" />
+    <ClCompile Include="src\Core\Hooks\Materials (Init Delete)\Materials (Init Delete).cpp" />
+    <ClCompile Include="src\Core\Hooks\MaterialUncache\MaterialUncache.cpp" />
+    <ClCompile Include="src\Core\Hooks\ModifySentChat\ModifySentChat.cpp" />
+    <ClCompile Include="src\Core\Hooks\OnScreenSizeChanged\OnScreenSizeChanged.cpp" />
+    <ClCompile Include="src\Core\Hooks\OverrideView\OverrideView.cpp" />
+    <ClCompile Include="src\Core\Hooks\PaintTraverse\PaintTraverse.cpp" />
+    <ClCompile Include="src\Core\Hooks\Paint\Paint.cpp" />
+    <ClCompile Include="src\Core\Hooks\ParticleModelColor\ParticleModelColor.cpp" />
+    <ClCompile Include="src\Core\Hooks\PerformScreenSpaceEffects\PerformScreenSpaceEffects.cpp" />
+    <ClCompile Include="src\Core\Hooks\PostProcessing\PostProcessing.cpp" />
+    <ClCompile Include="src\Core\Hooks\ProcessDSP\ProcessDSP.cpp" />
+    <ClCompile Include="src\Core\Hooks\RemoveCond\RemoveCond.cpp" />
+    <ClCompile Include="src\Core\Hooks\RenderView\RenderView.cpp" />
+    <ClCompile Include="src\Core\Hooks\RunCommand\RunCommand.cpp" />
+    <ClCompile Include="src\Core\Hooks\ScoreboardHook\ScoreboardHook.cpp" />
+    <ClCompile Include="src\Core\Hooks\SendNetMsg\SendNetMsg.cpp" />
+    <ClCompile Include="src\Core\Hooks\SetAbsVelocity\SetAbsVelocity.cpp" />
+    <ClCompile Include="src\Core\Hooks\SetColorModulation\SetColorModulation.cpp" />
+    <ClCompile Include="src\Core\Hooks\ShouldDrawViewmodel\ShouldDrawViewmodel.cpp" />
+    <ClCompile Include="src\Core\Hooks\S_StartDynamicSound\S_StartDynamicSound.cpp" />
+    <ClCompile Include="src\Core\Hooks\UpdateAssignedLobby\UpdateAssignedLobby.cpp" />
+    <ClCompile Include="src\Core\Hooks\ViewmodelPosition\ViewmodelPosition.cpp" />
+    <ClCompile Include="src\Core\Hooks\WndProc\WndProc.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\Draw\Draw.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\EntityCache\EntityCache.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\NetVar\NetVar.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\basecombatweapon.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\bitbuf.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\checksum_crc.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\convar.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\IEngineTrace.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\inetchannelinfo.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\keyvalues.cpp" />
+    <ClCompile Include="src\Core\SDK\Include\TF2\MD5.cpp" />
+    <ClCompile Include="src\Core\Utils\Hash\Hash.cpp" />
+    <ClCompile Include="src\Core\Utils\Hook\MinHook\buffer.c" />
+    <ClCompile Include="src\Core\Utils\Hook\MinHook\hde\hde32.c" />
+    <ClCompile Include="src\Core\Utils\Hook\MinHook\hde\hde64.c" />
+    <ClCompile Include="src\Core\Utils\Hook\MinHook\hook.c" />
+    <ClCompile Include="src\Core\Utils\Hook\MinHook\trampoline.c" />
+    <ClCompile Include="src\Core\Utils\Interface\Interface.cpp" />
+    <ClCompile Include="src\Core\Utils\Pattern\Pattern.cpp" />
+    <ClCompile Include="src\DllMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Core\Core.h" />
+    <ClInclude Include="src\Core\Features\Assistance\Aimbot\Aimbot.h" />
+    <ClInclude Include="src\Core\Features\Assistance\Aimbot\AimbotGlobal\AimbotGlobal.h" />
+    <ClInclude Include="src\Core\Features\Assistance\Aimbot\AimbotHitscan\AimbotHitscan.h" />
+    <ClInclude Include="src\Core\Features\Assistance\Aimbot\AimbotProjectile\AimbotProjectile.h" />
+    <ClInclude Include="src\Core\Features\Assistance\Aimbot\MoveSim\MoveSim.h" />
+    <ClInclude Include="src\Core\Features\Assistance\Triggerbot\Triggerbot.h" />
+    <ClInclude Include="src\Core\Features\Events\BadActors\BadActors.h" />
+    <ClInclude Include="src\Core\Features\Events\Events.h" />
+    <ClInclude Include="src\Core\Features\Exploits\AntiAim\AntiAim.h" />
+    <ClInclude Include="src\Core\Features\Exploits\AntiAim\AntiAimBeta.h" />
+    <ClInclude Include="src\Core\Features\Exploits\AntiAim\FakeAng.h" />
+    <ClInclude Include="src\Core\Features\Exploits\Backtrack\Backtrack.h" />
+    <ClInclude Include="src\Core\Features\Exploits\CritHack\CritHack.h" />
+    <ClInclude Include="src\Core\Features\Exploits\Engine Prediction\Prediction.h" />
+    <ClInclude Include="src\Core\Features\Exploits\Fakelag\Fakelag.h" />
+    <ClInclude Include="src\Core\Features\Misc\HookedNetVars\NetVarsHk.h" />
+    <ClInclude Include="src\Core\Features\Misc\Misc.h" />
+    <ClInclude Include="src\Core\Features\Vars.h" />
+    <ClInclude Include="src\Core\Features\Visuals\AttributeChanger\AttributeChanger.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Colors.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Models\Models.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Outlines\Outlines.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\ESP\ESP.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Indicators\Arrows.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Indicators\Indicators.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Indicators\RawData.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Menu\ConfigManager\ConfigManager.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Menu\DoUser.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Menu\GUI.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Menu\InputHelper\InputHelper.h" />
+    <ClInclude Include="src\Core\Features\Visuals\Render\GUI\Menu\PlayerList\PlayerList.h" />
+    <ClInclude Include="src\Core\Hooks\AvoidPlayers\AvoidPlayers.h" />
+    <ClInclude Include="src\Core\Hooks\CalcIsAttackCritical\CalcIsAttackCritical.h" />
+    <ClInclude Include="src\Core\Hooks\CanMoveDuringTaunt\CanMoveDuringTaunt.h" />
+    <ClInclude Include="src\Core\Hooks\CanRequestToJoinPlayer\CanRequestToJoinPlayer.h" />
+    <ClInclude Include="src\Core\Hooks\ChatPrintf\ChatPrintf.h" />
+    <ClInclude Include="src\Core\Hooks\CheckForSequenceChange\CheckForSequenceChange.h" />
+    <ClInclude Include="src\Core\Hooks\CheckSimpleMaterial\CheckSimpleMaterial.h" />
+    <ClInclude Include="src\Core\Hooks\CL_FireEvents\CL_FireEvents.h" />
+    <ClInclude Include="src\Core\Hooks\CL_LoadWhitelist\CL_LoadWhitelist.h" />
+    <ClInclude Include="src\Core\Hooks\CL_Move\CL_Move.h" />
+    <ClInclude Include="src\Core\Hooks\CL_SendMove\CL_SendMove.h" />
+    <ClInclude Include="src\Core\Hooks\CreateMove\CreateMove.h" />
+    <ClInclude Include="src\Core\Hooks\CreateTFRagdoll\CreateTFRagdoll.h" />
+    <ClInclude Include="src\Core\Hooks\CritBucketAdd\CritBucketAdd.h" />
+    <ClInclude Include="src\Core\Hooks\CritBucketWithdraw\CritBucketWithdraw.h" />
+    <ClInclude Include="src\Core\Hooks\CTFGameMovement\CTFGameMovement.h" />
+    <ClInclude Include="src\Core\Hooks\DataTableWarning\DataTableWarning.h" />
+    <ClInclude Include="src\Core\Hooks\DeleteIfUnreferenced\DeleteIfUnreferenced.h" />
+    <ClInclude Include="src\Core\Hooks\DoPostScreenSpaceEffects\DoPostScreenSpaceEffects.h" />
+    <ClInclude Include="src\Core\Hooks\DrawModelExecute\DrawModelExecute.h" />
+    <ClInclude Include="src\Core\Hooks\DrawStaticProps\DrawStaticProps.h" />
+    <ClInclude Include="src\Core\Hooks\DrawViewModels\DrawViewModels.h" />
+    <ClInclude Include="src\Core\Hooks\FireBullets\FireBullets.h" />
+    <ClInclude Include="src\Core\Hooks\ForcedMaterialOverride\ForcedMaterialOverride.h" />
+    <ClInclude Include="src\Core\Hooks\FrameAdvance\FrameAdvance.h" />
+    <ClInclude Include="src\Core\Hooks\FrameStageNotify\FrameStageNotify.h" />
+    <ClInclude Include="src\Core\Hooks\GetClientInterpAmount\GetClientInterpAmount.h" />
+    <ClInclude Include="src\Core\Hooks\GetDirectPingToPOP\GetDirectPingToPOP.h" />
+    <ClInclude Include="src\Core\Hooks\GetMaxItemCount\GetMaxItemCount.h" />
+    <ClInclude Include="src\Core\Hooks\GetOuterAbsVelocity\GetOuterAbsVelocity.h" />
+    <ClInclude Include="src\Core\Hooks\GetUserCmd\GetUserCmd.h" />
+    <ClInclude Include="src\Core\Hooks\Hooks.h" />
+    <ClInclude Include="src\Core\Hooks\InCond\InCond.h" />
+    <ClInclude Include="src\Core\Hooks\IsPlayerOnSteamFriendsList\IsPlayerOnSteamFriendsList.h" />
+    <ClInclude Include="src\Core\Hooks\IsPlayingTimeDemo\IsPlayingTimeDemo.h" />
+    <ClInclude Include="src\Core\Hooks\IsTaunting\IsTaunting.h" />
+    <ClInclude Include="src\Core\Hooks\KeyEvent\KeyEvent.h" />
+    <ClInclude Include="src\Core\Hooks\LevelInitPostEntity\LevelInitPostEntity.h" />
+    <ClInclude Include="src\Core\Hooks\LevelInitPreEntity\LevelInitPreEntity.h" />
+    <ClInclude Include="src\Core\Hooks\LevelInit\LevelInit.h" />
+    <ClInclude Include="src\Core\Hooks\LevelShutdown\LevelShutdown.h" />
+    <ClInclude Include="src\Core\Hooks\LockCursor\LockCursor.h" />
+    <ClInclude Include="src\Core\Hooks\MatchNotification\MatchNotification.h" />
+    <ClInclude Include="src\Core\Hooks\Materials (Init Delete)\Materials (Init Delete).h" />
+    <ClInclude Include="src\Core\Hooks\MaterialUncache\MaterialUncache.h" />
+    <ClInclude Include="src\Core\Hooks\ModifySentChat\ModifySentChat.h" />
+    <ClInclude Include="src\Core\Hooks\OnScreenSizeChanged\OnScreenSizeChanged.h" />
+    <ClInclude Include="src\Core\Hooks\OverrideView\OverrideView.h" />
+    <ClInclude Include="src\Core\Hooks\PaintTraverse\PaintTraverse.h" />
+    <ClInclude Include="src\Core\Hooks\Paint\Paint.h" />
+    <ClInclude Include="src\Core\Hooks\ParticleModelColor\ParticleModelColor.h" />
+    <ClInclude Include="src\Core\Hooks\PerformScreenSpaceEffects\PerformScreenSpaceEffects.h" />
+    <ClInclude Include="src\Core\Hooks\PostProcessing\PostProcessing.h" />
+    <ClInclude Include="src\Core\Hooks\ProcessDSP\ProcessDSP.h" />
+    <ClInclude Include="src\Core\Hooks\RemoveCond\RemoveCond.h" />
+    <ClInclude Include="src\Core\Hooks\RenderView\RenderView.h" />
+    <ClInclude Include="src\Core\Hooks\RunCommand\RunCommand.h" />
+    <ClInclude Include="src\Core\Hooks\ScoreboardHook\ScoreboardHook.h" />
+    <ClInclude Include="src\Core\Hooks\SendNetMsg\SendNetMsg.h" />
+    <ClInclude Include="src\Core\Hooks\SetAbsVelocity\SetAbsVelocity.h" />
+    <ClInclude Include="src\Core\Hooks\SetColorModulation\SetColorModulation.h" />
+    <ClInclude Include="src\Core\Hooks\ShouldDrawViewmodel\ShouldDrawViewmodel.h" />
+    <ClInclude Include="src\Core\Hooks\S_StartDynamicSound\S_StartDynamicSound.h" />
+    <ClInclude Include="src\Core\Hooks\UpdateAssignedLobby\UpdateAssignedLobby.h" />
+    <ClInclude Include="src\Core\Hooks\ViewmodelPosition\ViewmodelPosition.h" />
+    <ClInclude Include="src\Core\Hooks\WndProc\WndProc.h" />
+    <ClInclude Include="src\Core\SDK\Include\Draw\Draw.h" />
+    <ClInclude Include="src\Core\SDK\Include\EntityCache\EntityCache.h" />
+    <ClInclude Include="src\Core\SDK\Include\Include.h" />
+    <ClInclude Include="src\Core\SDK\Include\NetVar\NetVar.h" />
+    <ClInclude Include="src\Core\SDK\Include\PlayerResource\PlayerResource.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\AppsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\AppTicketCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\BillingCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\BridgeCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\CCallback.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\CGameID.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ClientCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ContentServerCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ControllerCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\CSteamAPIContext.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\CSteamID.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ECurrencyCode.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\EResult.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamAppUpdateStatsQueryType.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamBufferMethod.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamError.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamFindFilter.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamNotify.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamPaymentCardType.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamSeekMethod.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamServerType.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamSubscriptionBillingInfoType.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ESteamSubscriptionStatus.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\EVoiceResult.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\FriendGameInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\FriendsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\GameCoordinatorCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\GameServerCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\gameserveritem.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\GameServerStatsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\GameStatsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\HTTPCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientAppManager.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientApps.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientAudio.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientBilling.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientConfigStore.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientContentServer.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientDepotBuilder.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientDeviceAuth.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientEngine.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientFriends.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientGameCoordinator.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientGameServer.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientGameServerStats.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientGameStats.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientHTTP.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientInventory.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientMasterServerUpdater.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientMatchmaking.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientMatchmakingServers.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientMusic.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientNetworkDeviceManager.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientNetworking.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientProductBuilder.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientRemoteStorage.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientScreenshots.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientShortcuts.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientStreamClient.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientStreamLauncher.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientUGC.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientUnifiedMessages.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientUser.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientUserStats.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\IClientUtils.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\Interface_OSW.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\InventoryCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteam003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteam004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteam005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteam006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteam2Bridge001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteam2Bridge002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamAppList001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamApps007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamAppTicket001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamBilling001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamBilling002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient010.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient011.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient012.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient013.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient014.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient015.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient016.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamClient017.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamContentServer001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamContentServer002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamController001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends010.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends011.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends012.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends013.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends014.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamFriends015.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameCoordinator001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer010.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer011.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServer012.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameServerStats001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamGameStats001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamHTTP001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamHTTP002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamInventory001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMasterServerUpdater001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmaking009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmakingServers001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMatchmakingServers002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamMusic001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamNetworking001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamNetworking002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamNetworking003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamNetworking004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamNetworking005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamNetworkingUtils.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamOAuth001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage010.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage011.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamRemoteStorage012.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamScreenshots001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamScreenshots002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamStreamLauncher001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUGC001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUGC002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUGC003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUnifiedMessages001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser010.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser011.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser012.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser013.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser014.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser015.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser016.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUser017.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats008.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats009.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats010.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUserStats011.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils001.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils002.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils003.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils004.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils005.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils006.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ISteamUtils007.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\MasterServerUpdaterCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\MatchmakingCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\MatchMakingKeyValuePair.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\MatchmakingServersCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\MusicCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\NetworkingCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\OAuthCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\POSIXLibrary.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\RemoteStorageCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\ScreenshotsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\servernetadr.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\Steam.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\SteamAPI.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\Steamclient.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\SteamclientAPI.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\SteamSalt.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\SteamTypes.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\Steamworks.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\StreamLauncherCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamApp.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamAppDependencyInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamAppLaunchOption.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamAppStats.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamAppVersion.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamDiscountQualifier.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamElemInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamError.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamExternalBillingInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamGlobalUserID.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamOfflineStatus.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamPaymentCardInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamPaymentCardReceiptInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamPrepurchaseInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamPrepurchaseReceiptInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamProgress.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamSplitLocalUserID.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamSubscription.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamSubscriptionBillingInfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamSubscriptionDiscount.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamSubscriptionReceipt.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamSubscriptionStats.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\TSteamUpdateStats.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\UGCCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\UnifiedMessagesCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\UserCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\UserStatsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\UtilsCommon.h" />
+    <ClInclude Include="src\Core\SDK\Include\Steam\Win32Library.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\Activity.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseanimating.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseanimatingoverlay.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\basecombatcharacter.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\basecombatweapon.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseentity.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseflex.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseobject.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseplayer.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\baseprojectile.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\bitbuf.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ccaptureflag.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\cdll_int.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\checksum_crc.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\clientmode.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\const_light.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\convar.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\CTFPartyClient.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\dt_common.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\dt_recv.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\dt_recv_redef.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\econ_item_inventory.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\GameEventListener.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\gamemovement.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\gcclient_sharedobjectcache.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\globalinfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\globalvars_base.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\IAppSystem.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\icliententity.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\icliententitylist.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iclientmode.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iclientnetworkable.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iclientrenderable.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iclientthinkable.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iclientunknown.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ICollideable.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iconvar.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\icvar.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\IEngineTrace.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ienginevgui.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\igameevents.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ihasattributes.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ihasowner.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\imaterial.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\imaterialsystem.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\imatrendercontext.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\imovehelper.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\inetchannelinfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\input.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\inputsystem.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\interface.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iplayerinfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\iprediction.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ISurface.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\itexture.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ivdebugoverlay.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ivmodelinfo.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ivmodelrender.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\ivrenderview.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\keyvalues.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\MD5.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\MultiPlayerAnimState.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\Panel.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\plugins.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\proxyfnhook.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\soundparam.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\studio.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\TF2.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\tfplayeranimstate.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\tf_mvm_boss_progress_user.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\tf_player.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\viewrender.h" />
+    <ClInclude Include="src\Core\SDK\Include\TF2\weaponbase.h" />
+    <ClInclude Include="src\Core\SDK\SDK.h" />
+    <ClInclude Include="src\Core\Utils\Color\Color.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\DirectX.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3d9.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3d9caps.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3d9types.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9anim.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9core.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9effect.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9math.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9mesh.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9shader.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9shape.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9tex.h" />
+    <ClInclude Include="src\Core\Utils\DirectX\Include\d3dx9xof.h" />
+    <ClInclude Include="src\Core\Utils\Hash\FNV1A.h" />
+    <ClInclude Include="src\Core\Utils\Hash\Hash.h" />
+    <ClInclude Include="src\Core\Utils\Hook\Hook.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\buffer.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\hde\hde32.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\hde\hde64.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\hde\pstdint.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\hde\table32.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\hde\table64.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\MinHook.h" />
+    <ClInclude Include="src\Core\Utils\Hook\MinHook\trampoline.h" />
+    <ClInclude Include="src\Core\Utils\Interface\Interface.h" />
+    <ClInclude Include="src\Core\Utils\json\adl_serializer.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\conversions\from_json.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\conversions\to_chars.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\conversions\to_json.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\exceptions.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\input\binary_reader.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\input\input_adapters.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\input\json_sax.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\input\lexer.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\input\parser.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\input\position_t.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\iterators\internal_iterator.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\iterators\iteration_proxy.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\iterators\iterator_traits.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\iterators\iter_impl.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\iterators\json_reverse_iterator.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\iterators\primitive_iterator.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\json_pointer.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\json_ref.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\macro_scope.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\macro_unscope.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\meta\cpp_future.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\meta\detected.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\meta\is_sax.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\meta\type_traits.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\meta\void_t.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\output\binary_writer.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\output\output_adapters.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\output\serializer.hpp" />
+    <ClInclude Include="src\Core\Utils\json\detail\value_t.hpp" />
+    <ClInclude Include="src\Core\Utils\json\json.hpp" />
+    <ClInclude Include="src\Core\Utils\json\json_fwd.hpp" />
+    <ClInclude Include="src\Core\Utils\json\thirdparty\hedley\hedley.hpp" />
+    <ClInclude Include="src\Core\Utils\json\thirdparty\hedley\hedley_undef.hpp" />
+    <ClInclude Include="src\Core\Utils\Pattern\Pattern.h" />
+    <ClInclude Include="src\Core\Utils\Timer\Timer.h" />
+    <ClInclude Include="src\Core\Utils\tinyformat\tfm.h" />
+    <ClInclude Include="src\Core\Utils\Utils.h" />
+    <ClInclude Include="src\Core\Utils\UtlVector\UtlVector.h" />
+    <ClInclude Include="src\Core\Utils\Vector\Vector.h" />
+    <ClInclude Include="src\Core\Utils\VFunc\VFunc.h" />
+    <ClInclude Include="src\Core\Utils\WinAPI\WinAPI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\Core\Utils\DirectX\Include\d3dx9.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Core\Utils\DirectX\Include\d3dx9math.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
